@@ -32,4 +32,4 @@ jobs:
 
       - name: Push docker image to Amazon ECR
         run: |
-          docker push 881493551084.dkr.ecr.us-east-1.amazonaws.com/my_image:1.0
+          docker push 881493551084.dkr.ecr.us-east-1.amazonaws.com/hub
