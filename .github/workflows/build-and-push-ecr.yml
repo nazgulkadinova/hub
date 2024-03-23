@@ -31,5 +31,4 @@ jobs:
         run: docker tag my_image:1.0 881493551084.dkr.ecr.us-east-1.amazonaws.com/hub
 
       - name: Push docker image to Amazon ECR
-        run: |
-          docker push 881493551084.dkr.ecr.us-east-1.amazonaws.com/hub
+        run: docker push 881493551084.dkr.ecr.us-east-1.amazonaws.com/hub
