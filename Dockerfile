@@ -8,7 +8,7 @@ FROM nginx:1.25.4
 COPY nginx.conf /etc/nginx/conf.d/
 
 # Copy the static HTML file to the web server's root directory
-# COPY index.html /usr/share/nginx/html/
+COPY index.html /usr/share/nginx/html/
 
 # Expose port 80 to allow incoming connections
 EXPOSE 80
