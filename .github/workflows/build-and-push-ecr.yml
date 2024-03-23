@@ -25,10 +25,10 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
 
       - name: Build docker image
-        run: docker build -t my_image:1.0 .
+        run: docker build -t hub:1.0 .
 
       - name: Tag docker image
-        run: docker tag my_image:1.0 881493551084.dkr.ecr.us-east-1.amazonaws.com/hub
+        run: docker tag hub:1.0 881493551084.dkr.ecr.us-east-1.amazonaws.com/hub:1.0
 
       - name: Push docker image to Amazon ECR
-        run: docker push 881493551084.dkr.ecr.us-east-1.amazonaws.com/hub
+        run: docker push 881493551084.dkr.ecr.us-east-1.amazonaws.com/hub:1.0
