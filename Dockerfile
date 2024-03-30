@@ -1,5 +1,5 @@
 # Use the official Nginx base image
-FROM nginx: latest #1.25.4
+FROM nginx:1.25.4
 
 # Remove the default Nginx configuration file
 # RUN rm /etc/nginx/conf.d/default.conf
