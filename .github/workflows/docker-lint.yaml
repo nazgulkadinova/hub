@@ -1,0 +1,26 @@
+name: Dockerfile Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install hadolint
+      run: |
+        sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v2.7.0/hadolint-Linux-x86_64
+        sudo chmod +x /bin/hadolint
+
+    - name: Lint Dockerfile
+      run: |
+        hadolint Dockerfile
